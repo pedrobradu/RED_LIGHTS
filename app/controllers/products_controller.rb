@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all.order(:created_at)
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -38,10 +39,4 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
-
-  private
-
-  # def product_params
-  #   params.require(:product).permit(:name, :image_url)
-  # end
 end
