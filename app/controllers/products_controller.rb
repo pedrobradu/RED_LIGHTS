@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @products = Product.all
+    @products = Product.all.order(:created_at)
   end
 
   def new
@@ -17,6 +17,16 @@ class ProductsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_params) # Will raise ActiveModel::ForbiddenAttributesError
+    redirect_to product_path(@product)
   end
 
   private
