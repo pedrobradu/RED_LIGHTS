@@ -28,20 +28,14 @@ class ProductsController < ApplicationController
     @product.update(product_params) # Will raise ActiveModel::ForbiddenAttributesError
     redirect_to product_path(@product)
   end
-
-  private
-
-  def product_params
-    params.require(:product).permit(:name, :price, :category, :description)
-  end
-
+  
   def show
     @product = Product.find(params[:id])
   end
 
   private
 
-  # def product_params
-  #   params.require(:product).permit(:name, :image_url)
-  # end
+  def product_params
+    params.require(:product).permit(:name, :price, :category, :description)
+  end
 end
