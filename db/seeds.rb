@@ -12,13 +12,15 @@ User.create(email: "teste@teste.com", password: "123456")
 
 puts 'Creating 4 fake ruber penises...'
 
-product1 = Product.create!(user: User.first, name: "penis grande de borracha 1", price: 69.69, category: "dildo", description: "é um pênis bem grande com várias opções de cores")
+product1 = Product.create!(user: User.first, name: "penis grande de borracha 1", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
 puts product1
-product2 = Product.create!(user: User.first, name: "penis grande de borracha 2", price: 69.69, category: "dildo", description: "é um pênis bem grande com várias opções de cores")
+product2 = Product.create!(user: User.first, name: "penis grande de borracha 2", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
 puts product2
-product3 = Product.create!(user: User.first, name: "penis grande de borracha 3", price: 69.69, category: "dildo", description: "é um pênis bem grande com várias opções de cores")
+product3 = Product.create!(user: User.first, name: "penis grande de borracha 3", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
 puts product3
-product4 = Product.create!(user: User.first, name: "penis grande de borracha 4", price: 69.69, category: "dildo", description: "é um pênis bem grande com várias opções de cores")
+product4 = Product.create!(user: User.first, name: "penis grande de borracha 4", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
 puts product4
 
 puts 'Finished!'
+
+
