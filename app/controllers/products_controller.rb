@@ -29,17 +29,25 @@ class ProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
-  private
-
-  def product_params
-    params.require(:product).permit(:name, :price, :category, :description)
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to products_path, status: :see_other
   end
 
   def show
     @product = Product.find(params[:id])
   end
 
+
   private
+
+  def product_params
+    params.require(:product).permit(:name, :price, :category, :description)
+  end
+
+
+
 
   # def product_params
   #   params.require(:product).permit(:name, :image_url)
