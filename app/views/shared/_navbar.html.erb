@@ -9,7 +9,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
+        <p class="navbar-text float-right">
+        <% if user_signed_in? %>
+          Logado como: <strong><%= current_user.email %></strong>.
+          <%= link_to 'Editar perfil', edit_user_registration_path, class: 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Registre-se", new_user_registration_path, class: 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, class: 'navbar-link'  %>
+        <% end %>
+          <%# <li class="nav-item active">
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
@@ -23,7 +32,7 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
-          </li>
+          </li> %>
           <!--li class="nav-item"-->
           <!--/li-->
       </ul>
