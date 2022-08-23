@@ -1,0 +1,9 @@
+<%= "Formulário de Edição do Produto" %>
+
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
