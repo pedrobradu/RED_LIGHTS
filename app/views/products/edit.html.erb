@@ -1,9 +1,13 @@
-<%= "Formulário de Edição do Produto:" %>
+<div class="container">
+  <%= "Formulário de Edição do Produto:" %>
 
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :category %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+    <%= link_to 'Home', root_path, class: 'btn btn-secondary mb-3' %>
+    <%= link_to 'Voltar', product_path(@product), class: 'btn btn-secondary mb-3' %>
+</div>

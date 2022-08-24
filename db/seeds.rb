@@ -7,20 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
 User.destroy_all
+Order.destroy_all
 
 User.create(email: "teste@teste.com", password: "123456")
 
 puts 'Creating 4 fake ruber penises...'
 
-product1 = Product.create!(user: User.first, name: "penis grande de borracha 1", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
+product1 = Product.create!(user: User.first, name: "Vibrador Rotativo", price: 69.69, category: Product::CATEGORY.sample, description: "Com 36 níveis de vibração e 8 rotações")
 puts product1
-product2 = Product.create!(user: User.first, name: "penis grande de borracha 2", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
+product2 = Product.create!(user: User.first, name: "Baralho Kama Sutra", price: 38.00, category: Product::CATEGORY.sample, description: "Perfeito para você que deseja descobrir novas posições e formas de prazer com seu amado (a) para fugir da rotina")
 puts product2
-product3 = Product.create!(user: User.first, name: "penis grande de borracha 3", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
+product3 = Product.create!(user: User.first, name: "Fantasia Daenerys Targaryen", price: 179.69, category: Product::CATEGORY.sample, description: "Fantasia feminina para laçar o seu dragãozinho!")
 puts product3
-product4 = Product.create!(user: User.first, name: "penis grande de borracha 4", price: 69.69, category: Product::CATEGORY.sample, description: "é um pênis bem grande com várias opções de cores")
+product4 = Product.create!(user: User.first, name: "Kit Algemas", price: 109.60, category: Product::CATEGORY.sample, description: "Descubra novas sensações e possibilidades de mobilidade")
 puts product4
 
 puts 'Finished!'
-
-

@@ -36,3 +36,30 @@
   top: -20px;
   width: 40px;
 }
+
+.flat-card {
+  background-color: #DDDDDD;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+  width: 100%;
+  }
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-order {
+  display: flex;
+}
+
+.card-order-info {
+  // display: flex;
+  // flex-direction: column;
+  padding: 30px;
+  width: 400px;
+}

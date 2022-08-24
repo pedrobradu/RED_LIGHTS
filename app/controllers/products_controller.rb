@@ -5,6 +5,17 @@ class ProductsController < ApplicationController
     @products = Product.all.order(:created_at)
   end
 
+  def profiles
+    @my_products = current_user.products.order(:created_at)
+    
+    # @purchased_products = current_user.orders.map{ |order| order.product }
+
+    @purchased_products = Product.joins(:orders).where(orders: { user: current_user }).order(:created_at)
+
+
+
+  end
+
   def new
     @product = Product.new
   end

@@ -1,10 +1,15 @@
 <div class="container">
-  <h1 class='text-center'><%= "Parabéns!!!! Você acaba de adquirir o seu novo #{@product.name}" %></h1>
-  <div class="card-product mt-5">
-    <p><%= @product.name %></p>
-    <p><%= @product.description %></p>
-    <p><%= @product.category %></p>
-    <p><%= @order.quantity %></p>
-    <p><%= @order.total_price %></p>
+  <h1 class='text-center'><strong><%= "COMPRA CONFIRMADA!" %></strong></h1>
+  <h2 class='text-center'><%= "Você acaba de adquirir o seu novo #{@order.product.name}" %></h2>
+  <div class="card-order my-5">
+  <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg" width="500"/>
+    <div class="card-order-info">
+    <p><strong> Item: </strong><%= @order.product.name %></p>
+    <p><strong> Descrição: </strong><%= @order.product.description %></p>
+    <p><strong> Categoria: </strong><%= @order.product.category %></p>
+    <p><strong> Quantidade: </strong><%= @order.quantity %></p>
+    <p><strong> Valor total: </strong><%= @order.quantity * @order.product.price %></p>
+    <%= link_to 'Continuar comprando', root_path, class: 'btn btn-secondary mt-4' %>
+    </div>
   </div>
 </div>
