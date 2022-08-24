@@ -2,7 +2,7 @@
 <div class="products-container">
   <% @my_products.each do |product| %>
     <div class="flat-card">
-      <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png">
+      <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg">
       <div class="product-name">
         <h3> <%= product.name %> </h3>
       </div>
@@ -11,14 +11,18 @@
       </div>
 
     </div>
-<% end %>
+  <% end %>
 </div>
 
-<h1>Meus produtos comprados:</h1>
+<div class="products-container">
+  <%= link_to "ADICIONAR UM NOVO PRODUTO", new_product_path, class: "btn btn-success mt-3" %>
+</div>
+
+<h1>Produtos comprados:</h1>
 <div class="products-container">
   <% @purchased_products.each do |product| %>
     <div class="flat-card">
-      <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png">
+      <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg">
       <div class="product-name">
         <h3> <%= product.name %> </h3>
       </div>
@@ -27,5 +31,5 @@
       </div>
 
     </div>
-<% end %>
+  <% end %>
 </div>
