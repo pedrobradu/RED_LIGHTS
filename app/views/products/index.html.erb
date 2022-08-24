@@ -9,6 +9,9 @@
       <div class="product-price">
         <%= product.price %>
       </div>
-    <%# </div> %>
-<% end %>
+      <div class="d-flex justify-content-center">
+        <%= link_to "Ver mais", product_path(product[:id]), class: "btn btn-flat w-100" %>
+      </div>
+    </div>
+  <% end %>
 </div>
