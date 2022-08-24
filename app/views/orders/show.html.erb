@@ -6,5 +6,6 @@
     <p><strong> Categoria: </strong><%= @order.product.category %></p>
     <p><strong> Quantidade: </strong><%= @order.quantity %></p>
     <p><strong> Valor total: </strong><%= @order.quantity * @order.product.price %></p>
+    <%= link_to 'Continuar comprando', root_path, class: 'btn btn-secondary mt-4' %>
   </div>
 </div>
