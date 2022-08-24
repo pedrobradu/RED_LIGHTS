@@ -1,8 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-</a>
+      <%= link_to root_path, class: 'navbar-link' do %>
+        <%= image_tag "https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg" %>
+      <% end %>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,6 +14,7 @@
         <% if user_signed_in? %>
           Logado como: <strong><%= current_user.email %></strong>.
           <%= link_to 'Editar perfil', edit_user_registration_path, class: 'navbar-link' %> |
+          <%= link_to 'Minha página', user_path([:id]), class: 'navbar-link' %> |
           <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: 'navbar-link'  %>
         <% else %>
           <%= link_to "Registre-se", new_user_registration_path, class: 'navbar-link'  %> |
@@ -24,7 +26,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Messages</a>
           </li>
-          
+
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
