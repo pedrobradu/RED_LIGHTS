@@ -2,3 +2,18 @@
   display: flex;
   flex-direction: column;
 }
+.flat-card {
+  background-color: #DDDDDD;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+  width: 100%;
+  }
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
