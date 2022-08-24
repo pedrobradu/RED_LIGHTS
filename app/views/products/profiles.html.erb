@@ -1,0 +1,31 @@
+<h1>Meus produtos adicionados:</h1>
+<div class="products-container">
+  <% @my_products.each do |product| %>
+    <div class="flat-card">
+      <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png">
+      <div class="product-name">
+        <h3> <%= product.name %> </h3>
+      </div>
+      <div class="product-price">
+        <%= product.price %>
+      </div>
+
+    </div>
+<% end %>
+</div>
+
+<h1>Meus produtos comprados:</h1>
+<div class="products-container">
+  <% @purchased_products.each do |product| %>
+    <div class="flat-card">
+      <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png">
+      <div class="product-name">
+        <h3> <%= product.name %> </h3>
+      </div>
+      <div class="product-price">
+        <%= product.price %>
+      </div>
+
+    </div>
+<% end %>
+</div>
