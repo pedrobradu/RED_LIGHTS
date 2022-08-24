@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  margin: 20px 0;
 
 }
 
@@ -19,6 +20,29 @@ align-self: center;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 }
+
+
+.bnt-voltar {
+  margin-top: -650px;
+  margin-left: 30px;
+}
+
+
+.bnt-comprar {
+  background-color: #C21010;
+  align-self: center;
+}
+
+
+
+.container-show {
+  margin-left: 40%;
+  margin-top: 30px;
+
+
+}
+
+
 .flat-card {
   width: 900px;
   background-color: #DDDDDD;

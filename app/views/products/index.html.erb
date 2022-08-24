@@ -1,6 +1,7 @@
 <h1>As melhores ofertas para o seu prazer!</h1>
-<div class="products-container">
-  <% @products.each do |product| %>
+<div class="container">
+<% @products.each do |product| %>
+
     <div class="flat-card">
       <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png">
       <div class="product-name">
@@ -10,7 +11,7 @@
         <%= product.price %>
       </div>
       <div class="bnt">
-        <%= link_to "Ver mais", product_path(product[:id]), class: "btn btn-flat" %>
+        <%= link_to "ver mais", products_path, class: "btn btn-flat" %>
       </div>
     </div>
 <% end %>

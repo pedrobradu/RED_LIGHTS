@@ -1,9 +1,61 @@
 <div class="container">
-  <h1 class='text-center'><%= @product.name %></h1>
-  <div class="card-product mt-5">
-    <p><%= @product.name %></p>
-    <p><%= @product.description %></p>
-    <p><%= @product.price %></p>
-    <p><%= @product.category %></p>
+
+  <h1 class='text-center'>
+    <%= @product.name %>
+  </h1>
+
+
+  <div class="row justify-content-center">
+    <div class="col-4">
+
+      <div class="card-trip">
+        <img src="https://www.ladrilar.com.br/wp-content/uploads/2020/12/cinza-escuro.png" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @product.name %></h2>
+            <p><%= @product.description %></p>
+            <p><%= @product.category %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= @product.price %></h2>
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
   </div>
+
+
+  <div class="row justify-content-center my-2">
+    <div class="col-4">
+      <div class="d-grid gap-2">
+        <%= link_to "Comprar",  new_product_order_path(@product),  class: "btn btn-success btn-lg" %>
+        <%= link_to "Voltar", root_path,  class: "btn btn-outline-secondary mt-5" %>
+      </div>
+    </div>
+  </div>
+
+
 </div>
+
+
+
+
+<%# new_product_order_path
+id de product %>
+
+<%# link para voltar para home %>
+<%# colocar imagem de produto %>
+<%# botao para fazer ordem de compra %>
