@@ -10,7 +10,7 @@
           <%= f.input :quantity, collection: (1..10) %>
           <%= f.input :total_price, placeholder: 'Preço total' %>
           <%= f.submit "Salvar", class: "btn btn-success mt-3" %>
-          <%# <%= link_to "Voltar", product_path(@order.product), class: "btn btn-dark mt-3" %>
+          <%= link_to "Voltar", product_path(@product), class: "btn btn-dark mt-3" %>
         <% end %>
   </div>
 </div>
