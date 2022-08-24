@@ -14,7 +14,7 @@
         <% if user_signed_in? %>
           Logado como: <strong><%= current_user.email %></strong>.
           <%= link_to 'Editar perfil', edit_user_registration_path, class: 'navbar-link' %> |
-          <%= link_to 'Minha página', user_path([:id]), class: 'navbar-link' %> |
+          <%= link_to 'Minha página', profiles_products_path, class: 'navbar-link' %> |
           <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: 'navbar-link'  %>
         <% else %>
           <%= link_to "Registre-se", new_user_registration_path, class: 'navbar-link'  %> |
