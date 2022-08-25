@@ -8,7 +8,7 @@
 
 # Order.destroy_all
 # Product.destroy_all
-# User.destroy_all
+User.destroy_all
 
 user = User.create!(email: "teste@teste.com", password: "123456")
 

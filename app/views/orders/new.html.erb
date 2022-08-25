@@ -1,18 +1,18 @@
 <div class="container">
 
-  <div>
+  <div class="container mt-3">
     <h1>Confirme a sua compra:</h1>
   </div>
 
   <div class="container mt-3">
     <div class = "row justify-content-center">
-      <div class = "col-8 card-login">
+      <div class = "col-6 card-login">
         <div class = "text-center">
           <h2><%= @product.name %></h2>
-          <%= cl_image_tag("pqzuq6th6ppaxwbpxmjl", width: 400, height: 300, crop: :fit) %>
+          <%= cl_image_tag @product.photos.first.key, width: 400, height: 300, crop: :fit %>
           <%# <%= cl_image_tag @products.photo.new, width: 400, height: 300, crop: :fill %>
         </div>
-        <div class = "col-6 d-flex justify-content-center">
+        <div class = "d-flex justify-content-center mt-3" >
         <%= simple_form_for [@product, @order] do |f| %>
           <%= f.input :quantity, :label => "Quantidade:", collection: (1..10)%>
           <%= f.submit "Salvar", class: "btn btn-success mt-3" %>
