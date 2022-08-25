@@ -20,6 +20,6 @@
     <div class="flex-grow-1">
       <%= yield %>
     </div>
-    <%= render "shared/footer" %>
+    <%= render "shared/footer" unless @skip_footer %>
   </body>
 </html>

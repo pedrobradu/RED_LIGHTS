@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def home; end
+  def home
+    @skip_footer = true
+  end
 end
