@@ -33,8 +33,14 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update(product_params) # Will raise ActiveModel::ForbiddenAttributesError
+    @product.update(product_params) 
     redirect_to product_path(@product)
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to profiles_products_path, status: :see_other
   end
 
   def show
