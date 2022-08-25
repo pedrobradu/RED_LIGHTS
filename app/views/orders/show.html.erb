@@ -1,19 +1,19 @@
 <div class="container">
   <h1 class='text-center'><strong><%= "Compra Realizada!" %></strong></h1>
   <h2 class='text-center'><%= "Você acaba de adquirir: #{@order.product.name}" %></h2>
-  <div class="card-order my-5">
+  <div class="card-order my-5 d-flex justify-content-center">
     <% if @order.product.photos.attached? %>
       <%= cl_image_tag @order.product.photos[0].key, width: 400, height: 300, crop: :fit %>
     <% else %>
       <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg"/>
     <% end %>
     <div class="card-order-info">
-    <p><strong> Item: </strong><%= @order.product.name %></p>
-    <p><strong> Descrição: </strong><%= @order.product.description %></p>
-    <p><strong> Categoria: </strong><%= @order.product.category %></p>
-    <p><strong> Quantidade: </strong><%= @order.quantity %></p>
-    <p><strong> Valor total: </strong><%= @order.quantity * @order.product.price %></p>
-    <%= link_to 'Continuar comprando', products_path, class: 'btn btn-secondary mt-4' %>
+      <p><strong> Item: </strong><%= @order.product.name %></p>
+      <p><strong> Descrição: </strong><%= @order.product.description %></p>
+      <p><strong> Categoria: </strong><%= @order.product.category %></p>
+      <p><strong> Quantidade: </strong><%= @order.quantity %></p>
+      <p><strong> Valor total: </strong><%= @order.quantity * @order.product.price %></p>
+      <%= link_to 'Continuar comprando', products_path, class: 'btn btn-flat mt-4' %>
     </div>
   </div>
 </div>
