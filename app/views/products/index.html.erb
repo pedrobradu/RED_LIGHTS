@@ -1,8 +1,8 @@
-<h1>As melhores ofertas para o seu prazer</h1>
+<h1>As melhores ofertas para o seu prazer!</h1>
 <div class="products-container">
   <% @products.each do |product| %>
     <div class="flat-card">
-        <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+      <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
 
       <div class="product-name">
         <h3> <%= product.name %> </h3>
