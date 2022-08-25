@@ -1,15 +1,20 @@
-<div class="container">
-  <h1>Adicione um novo produto:</h1>
-</div>
 
 <div class="container mt-3">
+  <div class = "row justify-content-center">
+    <div class = "col-6 card-login">
+      <div class= "text-center mb-5">
+        <h1>Adicione um novo produto:</h1>
+      </div>
       <%= simple_form_for(@product) do |f| %>
         <%= f.input :name, placeholder: 'Nome do produto' %>
         <%= f.input :price, placeholder: 'Preço por unidade' %>
         <%= f.input :category, collection: Product::CATEGORY %>
         <%= f.input :description, placeholder: 'Descrição do produto' %>
-        <%# <%= f.input :photo, as: :file %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
         <%= f.submit "Salvar", class: "btn btn-success mt-3" %>
         <%= link_to "Voltar", profiles_products_path, class: "btn btn-dark mt-3" %>
       <% end %>
+    </div>
+  </div>
 </div>
