@@ -9,7 +9,7 @@
         <h3> <%= product.name %> </h3>
       </div>
       <div class="product-price">
-        <%= product.price %>
+        <%= "R$ #{product.price}" %>
       </div>
       <div class="d-flex">
         <% order = Order.find_by(product: product, user: current_user) %>
