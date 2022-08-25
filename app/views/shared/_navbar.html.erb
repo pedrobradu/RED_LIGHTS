@@ -12,12 +12,12 @@
       <ul class="navbar-nav me-auto">
        <% if user_signed_in? %>
        <div>
-       <div></div>
-          <div>
-            <%= link_to 'Editar perfil', edit_user_registration_path,  class: 'bnt btn-ghost' %>
-            <%= link_to 'Minha página', profiles_products_path, class: 'bnt btn-ghost' %>
-            <%= link_to "Log out", destroy_user_session_path, class: 'bnt btn-ghost', data: {turbo_method: :delete} %>
-          </div>
+        <div>
+          <%= link_to 'Shop', products_path,  class: 'bnt btn-ghost' %>
+          <%= link_to 'Editar perfil', edit_user_registration_path,  class: 'bnt btn-ghost' %>
+          <%= link_to 'Minha página', profiles_products_path, class: 'bnt btn-ghost' %>
+          <%= link_to "Log out", destroy_user_session_path, class: 'bnt btn-ghost', data: {turbo_method: :delete} %>
+        </div>
           <%# Logado como: <strong><%= current_user.email %>
             <%# index e adicionar produto %>
         </div>
