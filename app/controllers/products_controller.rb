@@ -7,7 +7,6 @@ class ProductsController < ApplicationController
 
   def profiles
     @my_products = current_user.products.order(:created_at)
-    
     # @purchased_products = current_user.orders.map{ |order| order.product }
 
     @purchased_products = Product.joins(:orders).where(orders: { user: current_user }).order(:created_at)
@@ -33,7 +32,7 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update(product_params) 
+    @product.update(product_params)
     redirect_to product_path(@product)
   end
 
@@ -50,6 +49,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :category, :description, :photo)
+    params.require(:product).permit(:name, :price, :category, :description, photos: [])
   end
 end
