@@ -11,7 +11,7 @@
         <%= f.input :category, collection: Product::CATEGORY %>
         <%= f.input :description, placeholder: 'Descrição do produto' %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        
+
         <%= f.submit "Salvar", class: "btn btn-success mt-3" %>
         <%= link_to "Voltar", profiles_products_path, class: "btn btn-dark mt-3" %>
       <% end %>
