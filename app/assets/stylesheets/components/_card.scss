@@ -3,7 +3,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-// #meche no tamanho da autura do produto
+// #Altera o tamanho da altura do produto
 .card-trip > img {
   height: 350px;
   width: 100%;
@@ -38,7 +38,7 @@
 }
 
 .flat-card {
-  background-color: #DDDDDD;
+  background-color: transparent;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,7 @@
   width: 100%;
   }
 }
+
 .card-info {
   display: flex;
   flex-direction: column;
