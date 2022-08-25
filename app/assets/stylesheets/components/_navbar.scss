@@ -1,15 +1,31 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+
+  background-color: transparent;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+  flex-grow: 0.5;
+  justify-content: center;
+  margin-top: 5px;
+  margin-left: 300px;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 .navbar-link img {
+  margin-top: 20px;
   width: 50px;
+  margin-left: 50px;
+}
+
+.theavatar {
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.login {
+  
+  margin-top: 10px;
+  margin-left: 800px;
 }
