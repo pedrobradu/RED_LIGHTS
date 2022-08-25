@@ -1,13 +1,18 @@
-<div class="container">
-  <%= "Formulário de Edição do Produto:" %>
-
-  <%= simple_form_for(@product) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :price %>
-    <%= f.input :category %>
-    <%= f.input :description %>
-    <%= f.submit %>
-  <% end %>
-    <%= link_to 'Home', root_path, class: 'btn btn-secondary mb-3' %>
-    <%= link_to 'Voltar', product_path(@product), class: 'btn btn-secondary mb-3' %>
+<div class="container mt-3">
+  <div class = "row justify-content-center">
+    <div class = "col-6 card-login">
+      <div class= "text-center mb-5">
+        <h1>Edite o produto:</h1>
+      </div>
+      <%= simple_form_for(@product) do |f| %>
+        <%= f.input :name, :label => "Nome:" %>
+        <%= f.input :price, :label => "Preço:" %>
+        <%= f.input :category, :label => "Categoria:" %>
+        <%= f.input :description, :label => "Descrição:" %>
+        <%# <%= f.input :photo, as: :file %>
+      <% end %>
+        <%= link_to 'Home', root_path, class: 'btn btn-secondary mt-3' %>
+        <%= link_to 'Voltar', product_path(@product), class: 'btn btn-secondary mt-3' %>
+    </div>
+  </div>
 </div>
