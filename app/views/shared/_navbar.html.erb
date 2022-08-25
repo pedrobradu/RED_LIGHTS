@@ -1,13 +1,12 @@
 
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid d-flex justify-content-between w-100">
-   <%= link_to root_path, class: 'navbar-link' do %>
-        <%= image_tag "https://i.pinimg.com/564x/00/15/59/001559fee832cb5438687d0310e31ddf.jpg" %>
-      <% end %>
 
+  <%= link_to 'Red Lights', root_path,  class: 'logo' %>
+<%#
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
@@ -17,7 +16,7 @@
           <div>
             <%= link_to 'Editar perfil', edit_user_registration_path,  class: 'bnt btn-ghost' %>
             <%= link_to 'Minha página', profiles_products_path, class: 'bnt btn-ghost' %>
-             <%= link_to "Log out", destroy_user_session_path, class: 'bnt btn-ghost', data: {turbo_method: :delete} %>
+            <%= link_to "Log out", destroy_user_session_path, class: 'bnt btn-ghost', data: {turbo_method: :delete} %>
           </div>
           <%# Logado como: <strong><%= current_user.email %>
             <%# index e adicionar produto %>
@@ -32,7 +31,7 @@
       </ul>
     </div>
     <div class="theavatar">
-       <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+       <%= image_tag "https://cdn-icons-png.flaticon.com/512/4202/4202848.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
        </div>
   </div>
 </div>

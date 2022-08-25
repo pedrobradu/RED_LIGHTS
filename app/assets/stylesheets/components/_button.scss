@@ -10,7 +10,6 @@
 }
 
 .btn-ghost {
-
   margin-top: 40px;
   text-decoration: none;
   background: transparent !important;
@@ -19,12 +18,24 @@
   border: none;
   font-weight: lighter;
   opacity: 0.7;
+  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn-ghost:hover {
   opacity: 0.4;
   color: rgb(201, 190, 190);
 }
+
+.bnt {
+  font-size: medium;
+  border-radius: 5;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #C21010;
+  align-self: center;
+  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .links-flex {
   display: flex;
   flex-direction: column;
@@ -44,7 +55,6 @@
   background-color: #e33838;
   align-self: center;
   width: 100px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn-home {
@@ -64,4 +74,15 @@
   color:#FFF;
   font-size: medium;
   text-decoration: none;
+}
+
+.bnt-voltar {
+  margin-top: -650px;
+  margin-left: 30px;
+}
+
+
+.bnt-comprar {
+  background-color: #C21010;
+  align-self: center;
 }
