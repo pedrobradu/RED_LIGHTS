@@ -10,7 +10,7 @@
 
       <div class="card-trip">
         <% if @product.photos.attached? %>
-          <%= cl_image_tag @product.photos.first.key, width: 400, height: 300, crop: :fill %>
+          <%= cl_image_tag @product.photos.first.key, width: 400, height: 300, crop: :fit %>
         <% else %>
           <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg"/>
         <% end %>

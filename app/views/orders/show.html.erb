@@ -1,9 +1,9 @@
 <div class="container">
-  <h1 class='text-center'><strong><%= "COMPRA CONFIRMADA!" %></strong></h1>
-  <h2 class='text-center'><%= "Você acaba de adquirir o seu novo #{@order.product.name}" %></h2>
+  <h1 class='text-center'><strong><%= "Compra Realizada!" %></strong></h1>
+  <h2 class='text-center'><%= "Você acaba de adquirir: #{@order.product.name}" %></h2>
   <div class="card-order my-5">
-    <% if @product.photos.attached? %>
-      <%= cl_image_tag @product.photos.key, width: 400, height: 300, crop: :fill %>
+    <% if @order.product.photos.attached? %>
+      <%= cl_image_tag @order.product.photos[0].key, width: 400, height: 300, crop: :fit %>
     <% else %>
       <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg"/>
     <% end %>

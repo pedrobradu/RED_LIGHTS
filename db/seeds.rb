@@ -10,7 +10,7 @@
 # Product.destroy_all
 # User.destroy_all
 
-# user = User.create(email: "teste@teste.com", password: "123456")
+user = User.create!(email: "teste@teste.com", password: "123456")
 
 # puts 'Creating 4 fake ruber penises...'
 
@@ -28,13 +28,13 @@ require "open-uri"
 
 puts 'Creating...'
 file = URI.open("https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg")
-product = Product.new(user_id: 17, name: "Vibrador Rotativo", price: 69.69, category: Product::CATEGORY.sample, description: "Com 36 níveis de vibração e 8 rotações")
-product.photos.attach(io: file, filename: "banana.png", content_type: "image/png")
+product = Product.new(user: user, name: "Vibrador Rotativo", price: 69.69, category: Product::CATEGORY.sample, description: "Com 36 níveis de vibração e 8 rotações")
+product.photos.attach(io: file, filename: "banana.jpg", content_type: "image/png")
 product.save!
 
 file = URI.open("https://i.pinimg.com/564x/2a/a7/32/2aa732f47877f2c24fef750c6689e5db.jpg")
-product = Product.new(user_id: 17, name: "Lubrificante", price: 19.69, category: Product::CATEGORY.sample, description: "Muito bom")
-product.photos.attach(io: file, filename: "milho.png", content_type: "image/png")
+product = Product.new(user: user, name: "Lubrificante", price: 19.69, category: Product::CATEGORY.sample, description: "Muito bom")
+product.photos.attach(io: file, filename: "milho.jpg", content_type: "image/png")
 product.save!
 
 puts 'Created!'
