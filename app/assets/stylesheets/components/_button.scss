@@ -13,17 +13,16 @@
   margin-top: 40px;
   text-decoration: none;
   background: transparent !important;
-  color: #4A4A4A;
+  color: #1d0802;
   padding: 8px 24px;
   border: none;
-  font-weight: lighter;
-  opacity: 0.7;
+  font-family: 'nunito';
+  font-weight: 600;
   // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn-ghost:hover {
-  opacity: 0.4;
-  color: rgb(201, 190, 190);
+  color: #C73352;
 }
 
 .bnt {
@@ -52,7 +51,7 @@
   border-radius: 5;
   margin-top: 10px;
   text-align: center;
-  background-color: #e33838;
+  background-color: #C73352;
   align-self: center;
   width: 100px;
 }
@@ -96,7 +95,7 @@
   background-color: #C73352;
   align-self: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  width: 100px;
+  width: 117px;
 }
 
 .btn-flat-add {
@@ -108,6 +107,18 @@
   background-color: #36DAE6;
   align-self: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn-profile-add {
+  color: #FFF;
+  font-size: medium;
+  border-radius: 5;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #36DAE6;
+  align-self: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 220px;
 }
 
 .btn-flat-voltar {
