@@ -1,40 +1,28 @@
 <div class="container">
+<div class="btn-voltar">
+         <%= link_to "Voltar", products_path,  class: "btn btn-outline-secondary mt-5"%>
+        </div>
 
-  <h1 class='text-center'>
-    <%= @product.name %>
-  </h1>
-
-
-  <div class="row justify-content-center">
-    <div class="col-4">
-
-      <div class="card-trip">
+     <div class="card-product">
         <% if @product.photos.attached? %>
           <%= cl_image_tag @product.photos.first.key, width: 400, height: 300, crop: :fit %>
         <% else %>
           <img src="https://i.pinimg.com/564x/d1/d7/3e/d1d73e69b6f6e93c80bc621545cbe928.jpg"/>
         <% end %>
-
-        <div class="card-trip-infos">
+        <div class="card-product-infos">
           <div>
-            <h2><%= @product.name %></h2>
-            <p><%= @product.description %></p>
-            <p><%= @product.category %></p>
+            <h3><strong> <%= @product.name %></strong></h2>
+            <p><strong> Descrição: </strong><%= @product.description %></p>
+            <p><strong> Categoria: </strong><%= @product.category %></p>
+             <h2> <strong> Valor total: </strong><%= @product.price %></h2>
+            <div>
+             <%= link_to "Comprar",  new_product_order_path(@product),  class: "btn btn-success btn-lg" %>
+             </div>
           </div>
-          <h2 class="card-trip-pricing"><%= @product.price %></h2>
         </div>
       </div>
-    </div>
   </div>
 
-
-  <div class="row justify-content-center my-2">
-    <div class="col-4">
-      <div class="d-grid gap-2">
-        <%= link_to "Comprar",  new_product_order_path(@product),  class: "btn btn-success btn-lg" %>
-        <%= link_to "Voltar", root_path,  class: "btn btn-outline-secondary mt-5" %>
-      </div>
-    </div>
   </div>
 
 
