@@ -1,8 +1,8 @@
-<div class = "container">
+<div class = "container my-5">
 
-  <h1><%= "Bem vindo, #{current_user.email}!"%></h1>
+  <h1><%= "Bem vinda, Carol!"%></h1>
 
-  <h1>Produtos comprados:</h1>
+  <h3><strong>Produtos comprados:</strong></h3>
   <div class="products-container">
     <% @purchased_products.each do |product| %>
       <div class="flat-card">
@@ -22,7 +22,10 @@
   </div>
 
   <div class = "mt-5">
-    <h1>Produtos adicionados por você:</h1>
+    <h3><strong>Produtos adicionados por você:</strong></h3>
+    <div class="products-container">
+      <%= link_to "+ NOVO PRODUTO", new_product_path, class: "btn btn-profile-add my-3" %>
+    </div>
     <div class="products-container">
       <% @my_products.each do |product| %>
         <div class="flat-card">
@@ -46,8 +49,5 @@
       <% end %>
     </div>
 
-    <div class="products-container">
-      <%= link_to "ADICIONAR UM NOVO PRODUTO", new_product_path, class: "btn btn-flat-add mt-3" %>
-    </div>
   </div>
 </div>
