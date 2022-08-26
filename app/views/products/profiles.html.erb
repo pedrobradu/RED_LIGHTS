@@ -1,8 +1,8 @@
-<div class = "container">
+<div class = "container my-5">
 
-  <h1><%= "Bem vindo, #{current_user.email}!"%></h1>
+  <h1><%= "Bem vinda, Carol!"%></h1>
 
-  <h1>Produtos comprados:</h1>
+  <h3><strong>Produtos comprados:</strong></h3>
   <div class="products-container">
     <% @purchased_products.each do |product| %>
       <div class="flat-card">
@@ -15,14 +15,17 @@
         </div>
         <div class="d-flex justify-content-center">
           <% order = Order.find_by(product: product, user: current_user) %>
-          <%= link_to "Ver compra", order_path(order), class: "btn btn-flat" %>
+          <%= link_to "Ver compra", order_path(order), class: "btn btn-flat w-100" %>
         </div>
       </div>
     <% end %>
   </div>
 
   <div class = "mt-5">
-    <h1>Produtos adicionados por você:</h1>
+    <h3><strong>Produtos adicionados por você:</strong></h3>
+    <div class="products-container">
+      <%= link_to "+ NOVO PRODUTO", new_product_path, class: "btn btn-profile-add my-3" %>
+    </div>
     <div class="products-container">
       <% @my_products.each do |product| %>
         <div class="flat-card">
@@ -33,17 +36,18 @@
           <div class="product-price text-center">
             <%= "R$ #{product.price}" %>
           </div>
-          <div class="d-flex justify-content-evenly">
-            <%= link_to "Ver", product_path(product[:id]), class: "btn btn-flat-profile" %>
-            <%= link_to "Editar", edit_product_path(product[:id]), class: "btn btn-flat-profile" %>
-            <%= link_to "Deletar", product_path(product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-flat-profile" %>
+          <div class="">
+            <div class = "row">
+              <%= link_to "Ver Produto", product_path(product[:id]), class: "btn btn-flat-profile w-100" %>
+            </div>
+            <div class = "row justify-content-between">
+              <%= link_to "Editar", edit_product_path(product[:id]), class: "btn btn-flat-profile" %>
+              <%= link_to "Deletar", product_path(product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-flat-profile" %>
+            </div>
           </div>
         </div>
       <% end %>
     </div>
 
-    <div class="products-container">
-      <%= link_to "ADICIONAR UM NOVO PRODUTO", new_product_path, class: "btn btn-flat-add mt-3" %>
-    </div>
   </div>
 </div>
