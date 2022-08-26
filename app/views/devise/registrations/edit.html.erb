@@ -1,15 +1,13 @@
 <div class = "container">
-  <div class = "row justify-content-center">
-    <div class = "col-6 card-login">
+  <div class = "row justify-content-center mt-5">
+    <div class = "col-6 card-login-user">
       <div class = "text-center mb-5">
         <h2>Edit <%= resource_name.to_s.humanize %></h2>
       </div>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
-
         <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true %>
-
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
@@ -26,7 +24,6 @@
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
         </div>
-
         <div class="form-actions">
           <%= f.button :submit, "Update", class: "btn btn-login" %>
         </div>
