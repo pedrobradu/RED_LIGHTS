@@ -6,27 +6,24 @@
 </div>
 
 <div class = "container">
-<div class="products-container mt-10">
-  <% @products.each do |product| %>
-    <div class="flat-card">
+  <div class="products-container">
+    <% @products.first(4).each do |product| %>
+      <div class="flat-card">
+        <% unless product.photos.first.nil? %>
+          <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
+          </div>
+        <% end %>
+        <%# cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
 
+        <div class="product-name mt-8 text-center d-flex flex-column">
+          <span><%= product.name %></span>
+          <span><%= "R$ #{product.price}" %></span>
+        </div>
 
-    <% unless product.photos.first.nil? %>
-      <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
+        <div class="d-flex justify-content-center">
+          <%= link_to "Ver mais", product_path(product[:id]), class: "btn btn-flat w-100" %>
+        </div>
       </div>
     <% end %>
-      <%# cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
-
-      <div class="product-name mt-8 text-center d-flex flex-column">
-        <span><%= product.name %></span>
-        <span><%= "R$ #{product.price}" %></span>
-      </div>
-      <%# <div class="product-price text-center">
-      </div> %>
-      <div class="d-flex justify-content-center">
-        <%= link_to "Ver mais", product_path(product[:id]), class: "btn btn-flat w-100" %>
-      </div>
-    </div>
-  <% end %>
-</div>
+  </div>
 </div>
