@@ -1,6 +1,6 @@
 <div class = "container my-5">
   <div class="welcome">
-    <h1><%= "Bem vinda, Carol!" %></h1>
+    <h1><%= "Bem vinda, Carol! 👩‍🦰" %></h1>
   </div>
 
   <h3><strong>Produtos comprados:</strong></h3>
@@ -27,7 +27,7 @@
   </div>
 
   <div class = "mt-5">
-    <h3><strong>Produtos adicionados por você:</strong></h3>
+    <h3><strong>Produtos vendidos por você:</strong></h3>
     <div class="products-container">
       <%= link_to "+ NOVO PRODUTO", new_product_path, class: "btn btn-profile-add my-3" %>
     </div>
@@ -38,7 +38,7 @@
             <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
             </div>
           <% end %>
-          
+
           <div class="product-name mt-8 text-center d-flex flex-column">
             <span><%= product.name %></span>
             <span><%= "R$ #{product.price}" %></span>
