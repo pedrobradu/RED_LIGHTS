@@ -1,48 +1,49 @@
-<h1><%= "Bem vindo #{current_user.email} "%></h1>
+<div class = "container">
 
-<h1>Produtos comprados:</h1>
-<div class="products-container">
-  <% @purchased_products.each do |product| %>
-    <div class="flat-card">
-      <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
-      <div class="product-name">
-        <h3> <%= product.name %> </h3>
+  <h1><%= "Bem vindo, #{current_user.email}!"%></h1>
+
+  <h1>Produtos comprados:</h1>
+  <div class="products-container">
+    <% @purchased_products.each do |product| %>
+      <div class="flat-card">
+        <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+        <div class="product-name text-center">
+          <h3> <%= product.name %> </h3>
+        </div>
+        <div class="product-price text-center">
+          <%= "R$ #{product.price}" %>
+        </div>
+        <div class="d-flex justify-content-center">
+          <% order = Order.find_by(product: product, user: current_user) %>
+          <%= link_to "Ver compra", order_path(order), class: "btn btn-flat" %>
+        </div>
       </div>
-      <div class="product-price">
-        <%= "R$ #{product.price}" %>
-      </div>
-      <div class="d-flex">
-        <% order = Order.find_by(product: product, user: current_user) %>
-        <%= link_to "Ver compra", order_path(order), class: "btn btn-flat" %>
-      </div>
+    <% end %>
+  </div>
+
+  <div class = "mt-5">
+    <h1>Produtos adicionados por você:</h1>
+    <div class="products-container">
+      <% @my_products.each do |product| %>
+        <div class="flat-card">
+          <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+          <div class="product-name text-center">
+            <h3> <%= product.name %> </h3>
+          </div>
+          <div class="product-price text-center">
+            <%= "R$ #{product.price}" %>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <%= link_to "Ver", product_path(product[:id]), class: "btn btn-flat-profile" %>
+            <%= link_to "Editar", edit_product_path(product[:id]), class: "btn btn-flat-profile" %>
+            <%= link_to "Deletar", product_path(product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-flat-profile" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
 
-<h1>Produtos adicionados por você:</h1>
-<div class="products-container">
-  <% @my_products.each do |product| %>
-    <div class="flat-card">
-      <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
-      <div class="product-name">
-        <h3> <%= product.name %> </h3>
-      </div>
-      <div class="product-price">
-        <%= product.price %>
-      </div>
-      <div class="d-flex">
-        <%= link_to "Ver produto", product_path(product[:id]), class: "btn btn-flat" %>
-      </div>
-      <div class="d-flex">
-        <%= link_to "Editar produto", edit_product_path(product[:id]), class: "btn btn-flat" %>
-      </div>
-      <div class="d-flex">
-        <%= link_to "Deletar produto", product_path(product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-flat" %>
-      </div>
+    <div class="products-container">
+      <%= link_to "ADICIONAR UM NOVO PRODUTO", new_product_path, class: "btn btn-flat-add mt-3" %>
     </div>
-  <% end %>
-</div>
-
-<div class="products-container">
-  <%= link_to "ADICIONAR UM NOVO PRODUTO", new_product_path, class: "btn btn-success mt-3" %>
+  </div>
 </div>
