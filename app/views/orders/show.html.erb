@@ -1,6 +1,8 @@
 <div class="container">
+  <div class="h1-card">
   <h1 class='text-center'><strong><%= "Compra Realizada!" %></strong></h1>
   <h2 class='text-center'><%= "Você acaba de adquirir: #{@order.product.name}" %></h2>
+  </div>
   <div class="card-order my-5 d-flex justify-content-center">
     <% if @order.product.photos.attached? %>
       <%= cl_image_tag @order.product.photos[0].key, width: 400, height: 300, crop: :fit %>
