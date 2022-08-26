@@ -61,12 +61,60 @@
 .card-order-info {
   // display: flex;
   // flex-direction: column;
+
   padding: 30px;
   width: 400px;
 }
 
 .card-login {
   background: white;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 50px;
+}
+
+// novo card pagina show
+
+
+.card-product {
+  justify-content: center;
+  margin-top: 100px;
+  overflow: hidden;
+  height: 500px;
+  background: transparent;
+  display: flex;
+  margin-left: 180px;
+}
+
+.card-product img {
+  height: 350px;
+  width: 350px;
+  border: 0;
+}
+
+.card-product h2 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size:  25px;
+  font-weight: bold;
+
+}
+
+.card-product h3 {
+
+  font-size:  30px;
+
+}
+
+
+.card-product p {
+  font-size: 25px;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  margin-left: 90px;
 }
