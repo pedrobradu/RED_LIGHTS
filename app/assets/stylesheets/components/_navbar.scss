@@ -1,3 +1,10 @@
+#navbar-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .navbar-lewagon {
   background-color: transparent;
 }
@@ -24,8 +31,9 @@
 }
 
 .theavatar {
-  margin-top: 20px;
-  margin-right: 50px;
+  position: relative;
+  top: 1vh;
+  right: 2vh;
 }
 
 .login {
@@ -33,7 +41,9 @@
   margin-left: 800px;
 }
 
+// se responsividade estiver problematica em outras telas, trocar o px por vh
 .buttons-navbar {
   display: flex;
-  align-items: right;
+  position: relative;
+  left: 170px;
 }
