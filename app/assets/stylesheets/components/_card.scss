@@ -68,33 +68,53 @@
   width: 400px;
 }
 
+.card-order {
+  margin-left: 40px;
+}
+
 .card-login {
   background: white;
   margin-top: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-bottom: 50px;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
   padding: 50px;
+
 }
 
 // novo card pagina show
-
+.h2-order {
+  margin-top: 40px;
+  margin-left: 510px;
+}
 
 .card-product {
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 160px;
   overflow: hidden;
   height: 500px;
   background: transparent;
   display: flex;
-  margin-left: 180px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 60px;
+
+  // margin-left: 180px;
 }
 
 .card-product img {
+  object-fit: contain;
   height: 350px;
   width: 350px;
   border: 0;
+   margin-top: 50px;
 }
 
 .card-product h2 {
-  margin-top: 15px;
   margin-bottom: 30px;
   font-size:  25px;
   font-weight: bold;
@@ -109,16 +129,18 @@
 
 
 .card-product p {
-  font-size: 25px;
-  line-height: 1.7;
-  opacity: 0.7;
+  font-weight: lighter;
+  line-height: 1;
   margin-bottom: 30px;
   margin-top: 30px;
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
-  margin-left: 90px;
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .card-img {
@@ -126,4 +148,9 @@
   min-height: 300px;
   background-size: cover;
   background-position: center;
+}
+
+.h1-card {
+
+  margin-top: 130px;
 }
