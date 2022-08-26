@@ -52,7 +52,7 @@
   border-radius: 5;
   margin-top: 10px;
   text-align: center;
-  background-color: #e33838;
+  background-color: #C73352;
   align-self: center;
   width: 100px;
 }
@@ -96,7 +96,7 @@
   background-color: #C73352;
   align-self: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  width: 100px;
+  width: 117px;
 }
 
 .btn-flat-add {
@@ -108,6 +108,18 @@
   background-color: #36DAE6;
   align-self: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn-profile-add {
+  color: #FFF;
+  font-size: medium;
+  border-radius: 5;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #36DAE6;
+  align-self: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 220px;
 }
 
 .btn-flat-voltar {
