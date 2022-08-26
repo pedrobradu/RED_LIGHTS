@@ -11,7 +11,7 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0.5;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 5px;
   margin-left: 300px;
 }
@@ -45,5 +45,5 @@
 .buttons-navbar {
   display: flex;
   position: relative;
-  left: 25vh;
+  align-self: flex-end;
 }
