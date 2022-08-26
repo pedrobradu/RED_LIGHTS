@@ -1,22 +1,23 @@
 <div class = "container my-5">
-
-  <h1><%= "Bem vinda, Carol!"%></h1>
+  <div class="welcome">
+    <h1><%= "Bem vinda, Carol! 👩‍🦰" %></h1>
+  </div>
 
   <h3><strong>Produtos comprados:</strong></h3>
   <div class="products-container">
     <% @purchased_products.each do |product| %>
       <div class="flat-card">
-        
+
         <% unless product.photos.first.nil? %>
-          <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+          <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
+          </div>
         <% end %>
-        
-        <div class="product-name text-center">
-          <h3> <%= product.name %> </h3>
+
+       <div class="product-name mt-8 text-center d-flex flex-column">
+          <span><%= product.name %></span>
+          <span><%= "R$ #{product.price}" %></span>
         </div>
-        <div class="product-price text-center">
-          <%= "R$ #{product.price}" %>
-        </div>
+
         <div class="d-flex justify-content-center">
           <% order = Order.find_by(product: product, user: current_user) %>
           <%= link_to "Ver compra", order_path(order), class: "btn btn-flat w-100" %>
@@ -26,7 +27,7 @@
   </div>
 
   <div class = "mt-5">
-    <h3><strong>Produtos adicionados por você:</strong></h3>
+    <h3><strong>Produtos vendidos por você:</strong></h3>
     <div class="products-container">
       <%= link_to "+ NOVO PRODUTO", new_product_path, class: "btn btn-profile-add my-3" %>
     </div>
@@ -34,14 +35,15 @@
       <% @my_products.each do |product| %>
         <div class="flat-card">
           <% unless product.photos.first.nil? %>
-            <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+            <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
+            </div>
           <% end %>
-          <div class="product-name text-center">
-            <h3> <%= product.name %> </h3>
+
+          <div class="product-name mt-8 text-center d-flex flex-column">
+            <span><%= product.name %></span>
+            <span><%= "R$ #{product.price}" %></span>
           </div>
-          <div class="product-price text-center">
-            <%= "R$ #{product.price}" %>
-          </div>
+
           <div class="">
             <div class = "row">
               <%= link_to "Ver Produto", product_path(product[:id]), class: "btn btn-flat-profile w-100" %>
