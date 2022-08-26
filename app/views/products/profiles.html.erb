@@ -6,7 +6,11 @@
   <div class="products-container">
     <% @purchased_products.each do |product| %>
       <div class="flat-card">
-        <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+        
+        <% unless product.photos.first.nil? %>
+          <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+        <% end %>
+        
         <div class="product-name text-center">
           <h3> <%= product.name %> </h3>
         </div>
@@ -29,7 +33,9 @@
     <div class="products-container">
       <% @my_products.each do |product| %>
         <div class="flat-card">
-          <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+          <% unless product.photos.first.nil? %>
+            <%= cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
+          <% end %>
           <div class="product-name text-center">
             <h3> <%= product.name %> </h3>
           </div>

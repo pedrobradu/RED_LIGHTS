@@ -9,8 +9,12 @@
 <div class="products-container mt-10">
   <% @products.each do |product| %>
     <div class="flat-card">
-    <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
-    </div>
+
+
+    <% unless product.photos.first.nil? %>
+      <div class="card-img" style="background-image: url('<%= cl_image_path product.photos.first.key %>');" >
+      </div>
+    <% end %>
       <%# cl_image_tag product.photos.first.key, width: 400, height: 300, crop: :fit %>
 
       <div class="product-name mt-8 text-center d-flex flex-column">
